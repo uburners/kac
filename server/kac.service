@@ -1,0 +1,16 @@
+[Unit]
+Description=Kurenivka Access Control Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/root/berryconda3/bin/python -m kac.main
+WorkingDirectory=/root/server
+EnvironmentFile=/root/kac.env
+
+[Install]
+WantedBy=multi-user.target

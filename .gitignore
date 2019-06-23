@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+/raspbian_bootpart/
+gw_work.qcow2
+test.py
+turn_gw.qcow2
+turn_gw_img.squashfs

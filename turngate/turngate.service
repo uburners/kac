@@ -1,0 +1,17 @@
+[Unit]
+Description=Turngate Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/root/berryconda3/bin/python -m turngate.main_sync
+WorkingDirectory=/root/
+EnvironmentFile=/root/turngate.env
+
+
+[Install]
+WantedBy=multi-user.target
